@@ -13,6 +13,7 @@
     <name>block-chain</name>
     <modules>
         <module>P1-blockchain-principles</module>
+        <module>block-chain-algorithm</module>
     </modules>
 
     <properties>
