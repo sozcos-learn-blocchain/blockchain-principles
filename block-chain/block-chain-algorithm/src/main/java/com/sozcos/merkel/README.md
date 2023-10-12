@@ -1,8 +1,5 @@
 # MerkleTree
-> 默克尔数 数据结构
-
-
-**相关资料:**  
+> **相关资料:**  
 [以太坊官方文档——默克尔数](https://ethereum.org/zh/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)  
 [默克尔树解析](https://www.cnblogs.com/bonelee/p/13154709.html)
 
@@ -12,7 +9,7 @@
 
 ---
 
-| 在区块链中，Merkle 树（Merkle Tree）是一种二叉树的数结构，用于有效地验证大量数据的完整性。
+> 在区块链中，Merkle 树（Merkle Tree）是一种二叉树的数结构，用于有效地验证大量数据的完整性。
 
 ### MerkelTree 结构:
 
@@ -40,7 +37,6 @@ flowchart BT
          2hASH-2
          2hASH-2
      end
-    
     2hASH-1 -- 相邻hash进行拼接 --> merkleTerrRoot
     2hASH-2 -- 相邻hash进行拼接 --> merkleTerrRoot
 ```
