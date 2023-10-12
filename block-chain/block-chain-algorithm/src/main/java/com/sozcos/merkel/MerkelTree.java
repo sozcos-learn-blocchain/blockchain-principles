@@ -13,5 +13,10 @@ public class MerkelTree {
 
             java 实现 默克尔树:
             https://zhuanlan.zhihu.com/p/273457592
+            https://www.ehcoo.com/MerkleTree.html
+
+            merkle 解析:
+            https://www.jianshu.com/p/66d7f53aff75
+
      */
 }
