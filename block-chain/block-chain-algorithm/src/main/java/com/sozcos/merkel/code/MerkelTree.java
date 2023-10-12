@@ -1,4 +1,4 @@
-package com.sozcos.merkel;
+package com.sozcos.merkel.code;
 
 /**
  * 默克尔数
