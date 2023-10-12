@@ -12,14 +12,16 @@
 
 ---
 
-| 在区块链中，Merkle 树（Merkle Tree）是一种哈希树的结构，用于有效地验证大量数据的完整性。
+| 在区块链中，Merkle 树（Merkle Tree）是一种二叉树的数结构，用于有效地验证大量数据的完整性。
 
-### MerkelTree 计算流程:
+### MerkelTree 结构:
 
 ---
 
 ```mermaid
-flowchart LR
+flowchart BT
+    MerkleTree结构
+    
     subgraph a["对已有区块交易进行hash计算"]
         block-1 -- 单个交易hash计算 --> HashValue1
         block-2 -- 单个交易hash计算 --> HashValue2
@@ -49,6 +51,6 @@ flowchart LR
 
 ---
 
-### [代码实现 Merkle Tree](./MerkelTree.java)
+### [代码实现 Merkle Tree](./code/MerkelTree.java)
 
 
