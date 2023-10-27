@@ -7,13 +7,9 @@
 
 ### MerkleTree 解决什么问题
 
----
-
 > 在区块链中，Merkle 树（Merkle Tree）是一种二叉树的数结构，用于有效地验证大量数据的完整性。
 
 ### MerkelTree 结构:
-
----
 
 ```mermaid
 flowchart BT
