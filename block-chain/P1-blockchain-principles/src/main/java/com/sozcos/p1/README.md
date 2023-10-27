@@ -38,11 +38,87 @@ P1 区块链介绍
 
 ---
 
-**1.3 区块存储的信息:**
+**1.3 查询我的交易信息**
 
-> 区块存储的信息分为2个部分, 一部分是区块头, 一部分是区块体
+假设你已经会使用数字货币进行交易, 那么如何查询以及看懂这笔交易数据的内容呢?
 
-区块头信息  
+这里以 MetaMask 钱包为例 ( **传送门** --> [_使用 MetaMask 钱包获取测试币进行数字货币交易_](https://github.com/inoutcode/ethereum_book/blob/master/%E7%AC%AC%E4%BA%8C%E7%AB%A0.asciidoc#%E5%AE%89%E8%A3%85-metamask) **注:**_测试币网络随着时间跟文章有所出入,需要自行搜索添加测试币教程_ )  
+
+可以通过复制交易ID获取直接跳转到浏览器查看交易的区块信息
+
+![](https://s2.loli.net/2023/10/27/1KMW7xusEGVUJNC.png)
+
+![](https://s2.loli.net/2023/10/27/2XmvbRYCycANupk.png)
+
+---
+
+**1.4 区块存储的信息:**
+
+> 区块存储的信息分为2个部分, 一部分是区块头, 一部分是区块体, 以下我们采用比特币区块信息来阐述
+
+通过 [比特币浏览器](https://btc.tokenview.io/cn?_gl=1%2a9lkioz%2a_ga%2aMjQ4Nzc1MjM0LjE2OTgzMTAwMzA.%2a_ga_0RCPHZPZTE%2aMTY5ODM5NjgyOS4zLjEuMTY5ODM5Njg2OC4wLjAuMA..) 查看区块信息
+
+区块的高度就是区块在链中所排列的位置,也可以理解成索引,可以通过区块高度以及区块哈希来查询区块信息
+
+
+通过API获取区块信息: [JSON](https://api.blockcypher.com/v1/btc/main/blocks/00000000000000000004727b3cc0946dc2054f59e362369e0437325c0a992efb)
+
+
+区块中存储数据:
+
+```json
+{
+  "hash": "00000000000000000004727b3cc0946dc2054f59e362369e0437325c0a992efb",
+  "height": 814037,
+  "chain": "BTC.main",
+  "total": 193017057174,
+  "fees": 9915912,
+  "size": 1635501,
+  "vsize": 999039,
+  "ver": 551550976,
+  "time": "2023-10-27T08:55:06Z",
+  "received_time": "2023-10-27T08:55:27.246Z",
+  "relayed_by": "54.235.161.238:8333",
+  "bits": 386178217,
+  "nonce": 4079513189,
+  "n_tx": 2003,
+  "prev_block": "0000000000000000000286cf768b68e905dee3c80c20b0b4cb895e3cb9e61357",
+  "mrkl_root": "5d0dae31db7c93f59ba2c595acc64eaf0d78ef07616bc31f091f4b696dd5d9fa",
+  "txids": [
+    "ab70327f9e8e79ac6c3745df45a7c6af7d04647846e054839054355890f74688",
+    "a16f505d3cc1afbf382d0d72109dc44eaa5eed5cb05b23bf29c77739bd9aefd1",
+    "da4faf29bbfaf6852f6a44831927f1dc75cf2775b3d3d8a5794443015473e843",
+    "386f62f12094db0170ac96b01a6d9f77d84b9ee72e5e79b585dd214c29a94a12",
+    "b86ec5655b9a2b5fcaae760edce63c1aeda6b6206714341bea5ea3e47bfc35cb",
+    "b3a0410b71ed7f03babd5f1b02e5f38ca6edaaf31e973f93888bd40c13593c51",
+    "f803bc50ae26afc7d9c78897f902c7edf781121fcb1c42d6db265154995e998b",
+    "162983f79edc6d69cf728550ac1cf2556e73a6eb389592fb46c21042b705d35f",
+    "00f542fb380c7b1215039f7191ac65216445d2b20104d20c9f51c016f140f928",
+    "a9a14968ea0147cdd73774b6b12b2786cb9205fae3cbf51df6ef0122fa044cc4",
+    "f7d3b73c78413615138696af617c6e7dc14426cb04b95208a33468758ab14b8c",
+    "f3cd96fae3721fabf9e8a143da7fe04a58a94b94b1f2705389da4e18ce3a1b64",
+    "fda27e4bd8073e723646ffa101a5c04c0d23c6f88b14bde6943ccd92ee7f926b",
+    "d5d12b5d654c5c229f6b539d344ded4865c5e554e386664ac06af21c670b1fd7",
+    "f7996882b763653eac54b76b14ea59ee30867117e8dd4fc9dec0db8a411ed951",
+    "3657e5ab966baff1df47b1a8190800bea5677de39091cfc007c4e5ee7ca78017",
+    "123a8a83d45daf56834b96b2d2832cab64115d3b19eacf9ce68d36865349f8a3",
+    "78d49f0c320a0f93930f46d500c4841c163190a6a28c545031c857ea3dbcf857",
+    "b60d3391bd27b18ebbf131e8c2ab96866b543cda3d7cefbfe3f895c722c96373",
+    "86e9d5c8f8d2747c57144f2ac427fee564f8f8a9d3e146e6b8204bc002aad7b2"
+  ],
+  "depth": 0,
+  "prev_block_url": "https://api.blockcypher.com/v1/btc/main/blocks/0000000000000000000286cf768b68e905dee3c80c20b0b4cb895e3cb9e61357",
+  "tx_url": "https://api.blockcypher.com/v1/btc/main/txs/",
+  "next_txids": "https://api.blockcypher.com/v1/btc/main/blocks/00000000000000000004727b3cc0946dc2054f59e362369e0437325c0a992efb?txstart=20\u0026limit=20"
+}
+```
+
+---
+
+**1.5 区块参数解析:**
+> 一个区块包含了2哥部分的信息: 区块头, 区块体, 区块头主要记录区块自身信息, 区块体主要记录区块内交易信息
+
+  
 version: 版本号          
 previousHash: 父区块hash  
 timestamp: 时间戳        
