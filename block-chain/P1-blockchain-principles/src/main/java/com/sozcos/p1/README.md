@@ -133,8 +133,10 @@ transactions: 区块内的多个交易数据
 
 
 比特币区块链浏览器查看的区块信息
+
 ![](https://s2.loli.net/2023/10/26/byGK41qW3zFg7Th.png)
 ![](https://s2.loli.net/2023/10/26/aC2xLl7BH8ARMcz.png)
+
 ---
 
 ```text
