@@ -8,11 +8,6 @@ P1 区块链介绍
 > 3. 了解区块链的商业以及应用价值
 > 4. 代码实现区块链
 
-**相关资料:**  
-[区块构成详解](https://zhuanlan.zhihu.com/p/48329978)  
-[区块链的定义以及原理](https://yeasy.gitbook.io/blockchain_guide/02_overview/definition)  
-[比特币交易数据结构解析](https://www.cnblogs.com/itlgl/p/10419307.html)
-
 ---
 
 ### 1. 区块链是什么
@@ -38,34 +33,34 @@ P1 区块链介绍
 
 ![区块串联](https://3503645665-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-M5xTVjj6plOWgHcmTHq%2Fuploads%2Fgit-blob-887d7ea4fec293b5267f672bd3a2229568ba2919%2Fblockchain_example.png?alt=media)
 
+_内容摘自 —— [区块链技术指南:区块链的定义以及原理]_
+
 ---
 
 **1.3 查询区块交易信息**
 
 假设你已经会使用数字货币进行交易, 那么如何查询以及看懂这笔交易数据的内容呢?
 
-这里以 MetaMask 钱包为例 ( **传送门** >>> [_使用 MetaMask
-钱包获取测试币进行数字货币交易_](https://github.com/inoutcode/ethereum_book/blob/master/%E7%AC%AC%E4%BA%8C%E7%AB%A0.asciidoc#%E5%AE%89%E8%A3%85-metamask)
-**注:**_测试币网络随着时间跟文章有所出入,需要自行搜索添加测试币教程_ )
+这里以 MetaMask 钱包为例 ( **传送门** >>> [使用 MetaMask 钱包获取测试币进行数字货币交易] **注:**_测试币网络随着时间跟文章有所出入,需要自行搜索添加测试币教程_ )
 
 可以通过复制交易ID或者直接跳转到浏览器查看交易的区块信息
 
 ![](https://s2.loli.net/2023/10/27/1KMW7xusEGVUJNC.png)
 
-![abcc](https://s2.loli.net/2023/10/27/2XmvbRYCycANupk.png)
+![](https://s2.loli.net/2023/10/27/2XmvbRYCycANupk.png)
 
 ---
 
 **1.4 区块存储的信息:**
 
-> 区块存储的信息分为2个部分, 一部分是区块头, 一部分是区块体, 以下我们采用比特币区块信息来阐述
+> 区块存储的信息分为2个部分, 一部分是区块头, 一部分是区块体, 以下我们采用比特币区块信息来阐述  
+> 常用区块链浏览器：[BlockCypher Explorer], [blockchain.info], [BitPay Insight]
 
-通过 [比特币浏览器](https://btc.tokenview.io/cn?_gl=1%2a9lkioz%2a_ga%2aMjQ4Nzc1MjM0LjE2OTgzMTAwMzA.%2a_ga_0RCPHZPZTE%2aMTY5ODM5NjgyOS4zLjEuMTY5ODM5Njg2OC4wLjAuMA..)
-查看区块信息
+通过 区块链浏览器 查看区块信息
 
 区块的高度就是区块在链中所排列的位置,也可以理解成索引,可以通过区块高度以及区块哈希来查询区块信息
 
-通过API获取区块和交易数据: [Block Json](https://api.blockcypher.com/v1/btc/main/blocks/00000000000000000004727b3cc0946dc2054f59e362369e0437325c0a992efb) / [Txs Json](https://api.blockcypher.com/v1/btc/main/txs/ab70327f9e8e79ac6c3745df45a7c6af7d04647846e054839054355890f74688?limit=50&includeHex=true)
+通过API获取区块和交易数据: [Block Json] / [Txs Json]
 
 <details> 
     <summary>区块数据:</summary>
@@ -170,11 +165,19 @@ P1 区块链介绍
 }</code></pre> 
 </details>
 
+_内容摘自——[博客园:比特币交易数据结构解析]_
+
 ---
 
 **1.5 区块参数解析:**
 > 一个区块包含了2个部分的信息: 区块头, 区块体, 区块头主要记录区块自身信息, 区块体主要记录区块内交易信息.  
 > 在这一节,我们主要是剖析数据结构中各个属性的含义以及他的运算逻辑
+
+
+
+_内容摘自——[GitHub:精通比特币2]：9-区块链_
+
+---
 
 **1.5.1 区块参数 —— Hash**
 > 定义:   
@@ -416,3 +419,24 @@ P2P 网络中暗含的激励机制也会尽力向其他节点提供服务，因�
 
 而在区块链网络中，并不存在一个中心节点来校验并记录交易信息，校验和记录工作有网络中的所有节点共同完成。当一个节点需要发起转账时，需要指明转账目的地址、转账金额等信息，同时还需要对该笔交易进行签名。由于不存在中心服务器，该交易会随机发送到网络中的邻近节点，邻近节点收到交易消息后，对交易进行签名，确认身份合法性后，再校验余额是否充足等信息。均校验完成后，它则会将该消息转发至自己的邻近节点。以此重复，直至网络中所有节点均收到该交易。最后，矿工获得记账权后，则会将该交易打包至区块，然后再广播至整个网络。区块广播过程同交易的广播过程，仍然使用一传十、十传百的方式完成。收到区块的节点完成区块内容验证后，即会将该区块永久地保存在本地，即交易生效。
 
+
+---
+
+**相关资料:**
+
+[知乎:区块构成详解]:https://zhuanlan.zhihu.com/p/48329978
+[区块链技术指南:区块链的定义以及原理]:https://yeasy.gitbook.io/blockchain_guide/02_overview/definition  
+[博客园:比特币交易数据结构解析]:https://www.cnblogs.com/itlgl/p/10419307.html  
+[GitHub:精通比特币2]:https://github.com/BtcGroupCn/MasterBitcoin2ndCn
+
+**拓展链接:**
+
+[使用 MetaMask 钱包获取测试币进行数字货币交易]:https://github.com/inoutcode/ethereum_book/blob/master/%E7%AC%AC%E4%BA%8C%E7%AB%A0.asciidoc#%E5%AE%89%E8%A3%85-metamask
+
+**内容物料链接:**
+
+[BlockCypher Explorer]:https://live.blockcypher.com/
+[blockchain.info]:https://blockchain.info/
+[BitPay Insight]:https://insight.bitpay.com/
+[Block Json]:https://api.blockcypher.com/v1/btc/main/blocks/00000000000000000004727b3cc0946dc2054f59e362369e0437325c0a992efb
+[Txs Json]:https://api.blockcypher.com/v1/btc/main/txs/ab70327f9e8e79ac6c3745df45a7c6af7d04647846e054839054355890f74688?limit=50&includeHex=true
