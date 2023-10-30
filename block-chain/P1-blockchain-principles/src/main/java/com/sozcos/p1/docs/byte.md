@@ -30,21 +30,6 @@ _以下内容来自 ChatGPT:_
 
 这就是将字符"币"转换为二进制的过程。希望这个解释能帮助你理解！如果你还有其他问题，请随时向我提问。
 
-### 代码实现
+### [代码实现](..%2Fcode%2FByteDemo.java)
 
-当然可以。以下是一个简单的Java代码示例，它将字符"币"转换为二进制字符串：
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        char ch = '币';
-        String binaryString = Integer.toBinaryString(ch);
-        System.out.println("The binary representation of '币' is: " + binaryString);
-    }
-}
-```
-
-这段代码首先定义了一个字符变量`ch`，并将其初始化为"币"。然后，它使用`Integer.toBinaryString(ch)`方法将字符转换为二进制字符串。最后，它打印出二进制字符串。
-
-当你运行这段代码时，它会输出"币"的二进制表示。希望这个示例能帮助你理解！如果你还有其他问题，请随时向我提问。
 
