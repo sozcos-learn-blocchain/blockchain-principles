@@ -11,15 +11,14 @@ public class ByteDemo {
 
     public static void main(String[] args) {
         char character = 'A'; // 要转换的字符
-        int unicode = character; // 获取字符的Unicode编码
 
         // Unicode编码转换为十六进制
-        String unicodeHex = String.format("U+%04X", unicode);
+        String unicodeHex = String.format("U+%04X", (int) character);
 
         // 十六进制Unicode编码转换为二进制
-        String binary = Integer.toBinaryString(unicode);
+        String binary = Integer.toBinaryString(character);
 
-        System.out.println("字符 '" + character + "' 的Unicode编码为: " + unicode);
+        System.out.println("字符 '" + character + "' 的Unicode编码为: " + (int) character);
         System.out.println("字符 '" + character + "' 的十六进制表示为: " + unicodeHex);
         System.out.println("字符 '" + character + "' 的二进制表示为: " + binary);
 

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.sozcos</groupId>
-    <artifactId>web3-tech</artifactId>
+    <artifactId>blockchain-principles</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
